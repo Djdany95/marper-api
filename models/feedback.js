@@ -7,7 +7,7 @@ var Schema = mongoose.Schema;
 var FeedbackSchema = Schema({
     nombre: String,
     email: String,
-    telefono: Number,
+    telefono: String,
     msg: String,
     creationDate: Date
 });

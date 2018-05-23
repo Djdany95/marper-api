@@ -8,6 +8,7 @@ var UserController = require('../controllers/user');
 var ContactController = require('../controllers/feedback');
 
 api.post('/login/', UserController.login);
+api.post('/register/', UserController.register);
 
 api.post('/contacto/', ContactController.sendFeedback);
 api.post('/feedback/', ContactController.getFeedback);

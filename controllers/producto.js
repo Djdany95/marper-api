@@ -179,7 +179,7 @@ function newProducto(req, res) {
     nProducto.precio = params.precio;
     nProducto.categoria = params.categoria;
     nProducto.marca = params.marca;
-    nProducto.imageUrl = params.imageUrl ? params.imageUrl : 'https://via.placeholder.com/150x150';
+    nProducto.imageUrl = params.imageUrl ? params.imageUrl : 'https://via.placeholder.com/200x100';
     nProducto.destacado = params.destacado;
 
     nProducto.save(function(err, newProducto) {
@@ -207,6 +207,7 @@ function updateProducto(req, res) {
             referencia: pReferencia
         }, {
             $set: {
+                referencia: params.referencia,
                 nombre: params.nombre,
                 precio: params.precio,
                 categoria: params.categoria,
