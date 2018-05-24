@@ -4,8 +4,9 @@
 var mongoose = require('mongoose');
 var app = require('./app');
 var port = process.env.PORT || 3678;
+var constants = require('./constants');
 
-mongoose.connect("mongodb://localhost:27017/marper", (err, res) => {
+mongoose.connect(constants.db, (err, res) => {
     if (err) {
         throw err;
     } else {
